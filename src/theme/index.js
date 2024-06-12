@@ -6,19 +6,33 @@ const customTheme = extendTheme({
     body: "'JetBrains Mono', monospace",
   },
   components: {
-    Table: {
+    Tr: {
       baseStyle: {
-        table: {
+        tr: {
           border: 'none',
         },
-        th: {
-          borderBottom: 'none',
+      },
+    },
+    Card: {
+      baseStyle: {
+        bg: '#FFF',
+        borderColor: '#f00',
+      },
+    },
+    Link: {
+      baseStyle: {
+        textDecoration: 'none',
+        _hover: {
+          textDecoration: 'none',
         },
-        td: {
-          borderBottom: 'none',
-        },
-        tr: {
-          borderBottom: 'none',
+      },
+    },
+    Button: {
+      baseStyle: {
+        bg: '#000',
+        color: '#fff',
+        _hover: {
+          color: '#000',
         },
       },
     },

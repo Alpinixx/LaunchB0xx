@@ -3,8 +3,9 @@ import {
   Box,
   Grid,
   GridItem,
-  Link as ChakraLink,
+  Link,
   Button,
+  Stack,
   Text,
   Heading,
   Highlight,
@@ -21,53 +22,41 @@ import {
 } from '@chakra-ui/react';
 import { FaFacebook, FaLinkedin, FaYoutube, FaInstagram } from 'react-icons/fa';
 
-const Footer = customTheme => {
+const Footer = () => {
   return (
-    <Box bg="#454545" w="100%" p={4} color="white">
-      <Grid templateColumns="repeat(4, 1fr)" gap={12}>
+    <Box as="footer" bg="#454545" w="100%" px={20} py={4} color="white">
+      <Grid templateColumns="repeat(4, 1fr)">
         <GridItem colSpan={1} w="100%">
-          <Grid
-            templateRows="repeat(2, 1fr"
-            templateColumns="repeat(4, 1fr)"
-            gap={6}
-          >
-            <GridItem colSpan={4} w="100%">
-              <Heading lineHeight="tall" color="#000">
-                <Highlight
-                  query="b0xx"
-                  styles={{
-                    px: '0',
-                    py: '4',
-                    rounded: '3px',
-                    bg: '#21c5b6',
-                    color: '#fff',
-                  }}
-                >
-                  Launchb0xx
-                </Highlight>
-              </Heading>
-            </GridItem>
-            <GridItem w="100%" h="10">
-              <Button>
-                <FaFacebook />
-              </Button>
-            </GridItem>
-            <GridItem w="100%" h="10">
-              <Button>
-                <FaLinkedin />
-              </Button>
-            </GridItem>
-            <GridItem w="100%" h="10">
-              <Button>
-                <FaYoutube />
-              </Button>
-            </GridItem>
-            <GridItem w="100%" h="10">
-              <Button>
-                <FaInstagram />
-              </Button>
-            </GridItem>
+          <Grid py={10}>
+            <Heading lineHeight="tall" color="#000">
+              <Highlight
+                query="b0xx"
+                styles={{
+                  px: '0',
+                  py: '4',
+                  rounded: '3px',
+                  bg: '#21c5b6',
+                  color: '#fff',
+                }}
+              >
+                Launchb0xx
+              </Highlight>
+            </Heading>
           </Grid>
+          <Stack direction="row" spacing={4} align="center">
+            <Link color="#828282" fontSize={20} variant="ghost">
+              <FaFacebook />
+            </Link>
+            <Link color="#828282" variant="ghost">
+              <FaLinkedin />
+            </Link>
+            <Link color="#828282" variant="ghost">
+              <FaYoutube />
+            </Link>
+            <Link color="#828282" variant="ghost">
+              <FaInstagram />
+            </Link>
+          </Stack>
         </GridItem>
         <GridItem colSpan={3} w="100%">
           <TableContainer>

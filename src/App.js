@@ -7,7 +7,12 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 import Landing from './components/Landing';
+
 import Structure from './components/Structure';
+import DAOStructure from './components/Structure/DAOStructure';
+import TeamSolidarity from './components/Structure/TeamSolidarity';
+import PlatformSupport from './components/Structure/PlatformSupport';
+
 import Development from './components/Development';
 import Presence from './components/Presence';
 import Launch from './components/Launch';
@@ -19,11 +24,22 @@ const App = () => {
       <Router>
         <Header />
         <Routes>
+          {/* This is main branchs */}
           <Route path="/" element={<Landing />} />
           <Route path="/structure" element={<Structure />} />
           <Route path="/development" element={<Development />} />
           <Route path="/presence" element={<Presence />} />
           <Route path="/launch" element={<Launch />} />
+          {/* Structure branchs */}
+          <Route path="/structure/daostructure" element={<DAOStructure />} />
+          <Route
+            path="/structure/teamsolidarity"
+            element={<TeamSolidarity />}
+          />
+          <Route
+            path="/structure/platformsupport"
+            element={<PlatformSupport />}
+          />
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </Router>
