@@ -74,7 +74,7 @@ const Launch = () => {
             </UnorderedList>
           </CardBody>
           <CardFooter>
-            <Button as={Link} href="/launch/launch">
+            <Button as={Link} href="/launch/launchsub">
               Send
             </Button>
           </CardFooter>

@@ -11,34 +11,30 @@ import {
   theme,
   GridItem,
 } from '@chakra-ui/react';
-import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react';
+import { Card, CardBody, CardFooter } from '@chakra-ui/react';
 
-import ImageSupport from '../../../assets/Support.png';
+import ImageAssembly from '../../../assets/Assembly.png';
 import ImageLaunchB0xx from '../../../assets/Launchb0xx.png';
 import ImageBaptLabs from '../../../assets/BaptLabs.png';
 import ImageAptosKnowledgeBase3 from '../../../assets/AptosKnowledgeBase3.png';
 
-const PlatformSupport = () => {
+const Assembly = () => {
   return (
     <Box p={12}>
       <Grid templateColumns="repeat(2, 1fr)" gap={24} p={2}>
         <GridItem colSpan={1}>
-          <Image
-            borderRadius="12px"
-            w="100%"
-            src={ImageSupport}
-            alt="Support.png: Platform Support page image"
-          />
+          <Image borderRadius="12px" w="100%" src={ImageAssembly} />
         </GridItem>
         <GridItem colSpan={1}>
-          <Heading size="lg">Platform Support</Heading>
+          <Heading size="lg">Assembly.</Heading>
           <Text>Portals to top choices within the Aptos ecosystem.</Text>
           <Text>
-            Customer service and other resources provide critical support for a
-            hard-working blockchain project. They enhance user experience,
-            resolve issues promptly, and build trust. Access to resources like
-            tutorials and documentation accelerates development, aiding in
-            platform adoption and community growth.
+            Your meticulous approach and attention to detail in developing your
+            crypto project has set it apart from the others. By focusing on
+            thoroughness, you've ensured that each component is well-crafted and
+            cohesive. With the major pieces assembled, the next logical step is
+            to launch. Your dedication to excellence positions you for success
+            in a very competitive crypto space.
           </Text>
           <Text>
             Below are links to resources and support within our platform and the
@@ -88,4 +84,4 @@ const PlatformSupport = () => {
   );
 };
 
-export default PlatformSupport;
+export default Assembly;

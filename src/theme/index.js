@@ -36,6 +36,11 @@ const customTheme = extendTheme({
         },
       },
     },
+    Image: {
+      baseStyle: {
+        borderRadius: '8px',
+      },
+    },
   },
 });
 

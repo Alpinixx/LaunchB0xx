@@ -11,14 +11,14 @@ import {
   theme,
   GridItem,
 } from '@chakra-ui/react';
-import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react';
+import { Card, CardBody, CardFooter } from '@chakra-ui/react';
 
-import ImageSupport from '../../../assets/Support.png';
-import ImageLaunchB0xx from '../../../assets/Launchb0xx.png';
+import ImageDocumentation from '../../../assets/Documentation.png';
+import ImageBitdegree from '../../../assets/Bitdegree.png';
 import ImageBaptLabs from '../../../assets/BaptLabs.png';
 import ImageAptosKnowledgeBase3 from '../../../assets/AptosKnowledgeBase3.png';
 
-const PlatformSupport = () => {
+const Documentation = () => {
   return (
     <Box p={12}>
       <Grid templateColumns="repeat(2, 1fr)" gap={24} p={2}>
@@ -26,19 +26,19 @@ const PlatformSupport = () => {
           <Image
             borderRadius="12px"
             w="100%"
-            src={ImageSupport}
-            alt="Support.png: Platform Support page image"
+            src={ImageDocumentation}
+            alt="Documentation.png: Documentation page image"
           />
         </GridItem>
         <GridItem colSpan={1}>
-          <Heading size="lg">Platform Support</Heading>
-          <Text>Portals to top choices within the Aptos ecosystem.</Text>
+          <Heading size="lg">Contracts.</Heading>
+          <Text>Documentation.</Text>
           <Text>
-            Customer service and other resources provide critical support for a
-            hard-working blockchain project. They enhance user experience,
-            resolve issues promptly, and build trust. Access to resources like
-            tutorials and documentation accelerates development, aiding in
-            platform adoption and community growth.
+            Publishing documentation and references for a blockchain project
+            fosters transparency, educates users, and builds trust. It
+            accelerates development, reduces support burden, and attracts
+            contributors, ultimately driving platform adoption and community
+            growth.
           </Text>
           <Text>
             Below are links to resources and support within our platform and the
@@ -52,13 +52,11 @@ const PlatformSupport = () => {
         </GridItem>
         <Card maxW="sm">
           <CardBody>
-            <Image src={ImageLaunchB0xx} alt="LaunchB0xx.png" />
+            <Image src={ImageBitdegree} alt="Bitdegree.png" />
           </CardBody>
           <CardFooter>
-            <Heading size="sm">24/7 LaunchB0xx Support team</Heading>
-            <Text textDecoration="underline">
-              Around the clock project support
-            </Text>
+            <Heading size="sm">Bitdegree</Heading>
+            <Text textDecoration="underline">Documentation Defined</Text>
           </CardFooter>
         </Card>
         <Card maxW="sm">
@@ -66,8 +64,8 @@ const PlatformSupport = () => {
             <Image src={ImageBaptLabs} alt="BaptLabs.png" />
           </CardBody>
           <CardFooter>
-            <Heading size="sm">Bapt Labs</Heading>
-            <Text textDecoration="underline">Bapt LABS Documentation</Text>
+            <Heading size="sm">Bapt Labts</Heading>
+            <Text textDecoration="underline">BaptSwap Documentation</Text>
           </CardFooter>
         </Card>
         <Card maxW="sm">
@@ -77,9 +75,7 @@ const PlatformSupport = () => {
               alt="AptosKnowledgeBase3.png"
             />
             <Heading size="sm">Aptos Knowledge Base</Heading>
-            <Text textDecoration="underline">
-              Contribute to the Aptos Ecosystem
-            </Text>
+            <Text textDecoration="underline">Aptos Whitepaper</Text>
           </CardBody>
           <CardFooter></CardFooter>
         </Card>
@@ -88,4 +84,4 @@ const PlatformSupport = () => {
   );
 };
 
-export default PlatformSupport;
+export default Documentation;

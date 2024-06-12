@@ -77,7 +77,7 @@ const Development = () => {
             </UnorderedList>
           </CardBody>
           <CardFooter>
-            <Button as={Link} href="/development/contract">
+            <Button as={Link} href="/development/contracts">
               Build
             </Button>
           </CardFooter>

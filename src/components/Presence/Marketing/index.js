@@ -11,34 +11,32 @@ import {
   theme,
   GridItem,
 } from '@chakra-ui/react';
-import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react';
+import { Card, CardBody, CardFooter } from '@chakra-ui/react';
 
-import ImageSupport from '../../../assets/Support.png';
+import ImageMarketing from '../../../assets/Marketing.png';
 import ImageLaunchB0xx from '../../../assets/Launchb0xx.png';
 import ImageBaptLabs from '../../../assets/BaptLabs.png';
 import ImageAptosKnowledgeBase3 from '../../../assets/AptosKnowledgeBase3.png';
 
-const PlatformSupport = () => {
+const Marketing = () => {
   return (
     <Box p={12}>
       <Grid templateColumns="repeat(2, 1fr)" gap={24} p={2}>
         <GridItem colSpan={1}>
-          <Image
-            borderRadius="12px"
-            w="100%"
-            src={ImageSupport}
-            alt="Support.png: Platform Support page image"
-          />
+          <Image borderRadius="12px" w="100%" src={ImageMarketing} />
         </GridItem>
         <GridItem colSpan={1}>
-          <Heading size="lg">Platform Support</Heading>
+          <Heading size="lg">Marketing.</Heading>
           <Text>Portals to top choices within the Aptos ecosystem.</Text>
           <Text>
-            Customer service and other resources provide critical support for a
-            hard-working blockchain project. They enhance user experience,
-            resolve issues promptly, and build trust. Access to resources like
-            tutorials and documentation accelerates development, aiding in
-            platform adoption and community growth.
+            Good marketing skills are essential for a crypto project to succeed
+            by building brand awareness, attracting investors, and expanding the
+            user base. Effective marketing strategies, such as social media
+            campaigns, influencer partnerships, and community engagement, can
+            significantly impact a project's growth. For example, the marketing
+            campaign for the cryptocurrency Aptos helped propel it from a new
+            project to a widely recognized digital asset, demonstrating the
+            power of marketing in the crypto space.
           </Text>
           <Text>
             Below are links to resources and support within our platform and the
@@ -88,4 +86,4 @@ const PlatformSupport = () => {
   );
 };
 
-export default PlatformSupport;
+export default Marketing;

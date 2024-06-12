@@ -11,35 +11,24 @@ import {
   theme,
   GridItem,
 } from '@chakra-ui/react';
-import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react';
+import { Card, CardBody, CardFooter } from '@chakra-ui/react';
 
-import ImageSupport from '../../../assets/Support.png';
+import ImageLaunch from '../../../assets/Launch.png';
 import ImageLaunchB0xx from '../../../assets/Launchb0xx.png';
 import ImageBaptLabs from '../../../assets/BaptLabs.png';
 import ImageAptosKnowledgeBase3 from '../../../assets/AptosKnowledgeBase3.png';
 
-const PlatformSupport = () => {
+const LaunchSub = () => {
   return (
     <Box p={12}>
       <Grid templateColumns="repeat(2, 1fr)" gap={24} p={2}>
         <GridItem colSpan={1}>
-          <Image
-            borderRadius="12px"
-            w="100%"
-            src={ImageSupport}
-            alt="Support.png: Platform Support page image"
-          />
+          <Image borderRadius="12px" w="100%" src={ImageLaunch} />
         </GridItem>
         <GridItem colSpan={1}>
-          <Heading size="lg">Platform Support</Heading>
+          <Heading size="lg">Launch.</Heading>
           <Text>Portals to top choices within the Aptos ecosystem.</Text>
-          <Text>
-            Customer service and other resources provide critical support for a
-            hard-working blockchain project. They enhance user experience,
-            resolve issues promptly, and build trust. Access to resources like
-            tutorials and documentation accelerates development, aiding in
-            platform adoption and community growth.
-          </Text>
+          <Text>Send it. Here are the tools for just that:</Text>
           <Text>
             Below are links to resources and support within our platform and the
             Aptos sphere.
@@ -88,4 +77,4 @@ const PlatformSupport = () => {
   );
 };
 
-export default PlatformSupport;
+export default LaunchSub;

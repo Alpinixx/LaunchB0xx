@@ -57,7 +57,7 @@ const Structure = () => {
             </UnorderedList>
           </CardBody>
           <CardFooter>
-            <Button as={Link} href="/structure/daoscructure">
+            <Button as={Link} href="/structure/daostructure">
               Create
             </Button>
           </CardFooter>

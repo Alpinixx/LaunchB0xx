@@ -11,34 +11,29 @@ import {
   theme,
   GridItem,
 } from '@chakra-ui/react';
-import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react';
+import { Card, CardBody, CardFooter } from '@chakra-ui/react';
 
-import ImageSupport from '../../../assets/Support.png';
+import ImageMaintain from '../../../assets/Maintain.png';
 import ImageLaunchB0xx from '../../../assets/Launchb0xx.png';
 import ImageBaptLabs from '../../../assets/BaptLabs.png';
 import ImageAptosKnowledgeBase3 from '../../../assets/AptosKnowledgeBase3.png';
 
-const PlatformSupport = () => {
+const Maintain = () => {
   return (
     <Box p={12}>
       <Grid templateColumns="repeat(2, 1fr)" gap={24} p={2}>
         <GridItem colSpan={1}>
-          <Image
-            borderRadius="12px"
-            w="100%"
-            src={ImageSupport}
-            alt="Support.png: Platform Support page image"
-          />
+          <Image borderRadius="12px" w="100%" src={ImageMaintain} />
         </GridItem>
         <GridItem colSpan={1}>
-          <Heading size="lg">Platform Support</Heading>
+          <Heading size="lg">Maintain.</Heading>
           <Text>Portals to top choices within the Aptos ecosystem.</Text>
           <Text>
-            Customer service and other resources provide critical support for a
-            hard-working blockchain project. They enhance user experience,
-            resolve issues promptly, and build trust. Access to resources like
-            tutorials and documentation accelerates development, aiding in
-            platform adoption and community growth.
+            Sometimes people aren’t happy with the details we creators favor.
+            That’s fine. We’ll fix ‘em. Sometimes pounding a keyboard 20hrs a
+            day can lead to oversights. That’s fine. We’ll fix ‘em. Sometimes,
+            we wonder exactly what the hell we were thinking with the entire
+            design. That’s fine. Because creating isn’t all we do. We fix, too.
           </Text>
           <Text>
             Below are links to resources and support within our platform and the
@@ -88,4 +83,4 @@ const PlatformSupport = () => {
   );
 };
 
-export default PlatformSupport;
+export default Maintain;

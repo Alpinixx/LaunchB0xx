@@ -12,13 +12,20 @@ import {
   GridItem,
 } from '@chakra-ui/react';
 import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react';
+import {
+  List,
+  ListItem,
+  ListIcon,
+  OrderedList,
+  UnorderedList,
+} from '@chakra-ui/react';
 
-import ImageSupport from '../../../assets/Support.png';
-import ImageLaunchB0xx from '../../../assets/Launchb0xx.png';
-import ImageBaptLabs from '../../../assets/BaptLabs.png';
+import ImageGraphics from '../../../assets/Graphics.png';
+import ImageLeonardoAI from '../../../assets/LeonardoAI.png';
+import ImageCanva from '../../../assets/Canva.png';
 import ImageAptosKnowledgeBase3 from '../../../assets/AptosKnowledgeBase3.png';
 
-const PlatformSupport = () => {
+const RealEstate = () => {
   return (
     <Box p={12}>
       <Grid templateColumns="repeat(2, 1fr)" gap={24} p={2}>
@@ -26,19 +33,20 @@ const PlatformSupport = () => {
           <Image
             borderRadius="12px"
             w="100%"
-            src={ImageSupport}
-            alt="Support.png: Platform Support page image"
+            src={ImageGraphics}
+            alt="Graphics.png: Graphics page image"
           />
         </GridItem>
         <GridItem colSpan={1}>
-          <Heading size="lg">Platform Support</Heading>
+          <Heading size="lg">Fractionalization.</Heading>
           <Text>Portals to top choices within the Aptos ecosystem.</Text>
           <Text>
-            Customer service and other resources provide critical support for a
-            hard-working blockchain project. They enhance user experience,
-            resolve issues promptly, and build trust. Access to resources like
-            tutorials and documentation accelerates development, aiding in
-            platform adoption and community growth.
+            Good graphics are crucial for NFT creation as they enhance the
+            visual appeal and perceived value of the NFT. Good graphics also
+            attract users to social platforms by creating visually engaging
+            content, increasing visibility and engagement. For tokens and NFTs,
+            appealing graphics can spark interest, drive traffic, and ultimately
+            increase adoption and sales.
           </Text>
           <Text>
             Below are links to resources and support within our platform and the
@@ -52,22 +60,20 @@ const PlatformSupport = () => {
         </GridItem>
         <Card maxW="sm">
           <CardBody>
-            <Image src={ImageLaunchB0xx} alt="LaunchB0xx.png" />
+            <Image src={ImageLeonardoAI} alt="LeonardoAI.png" />
           </CardBody>
           <CardFooter>
-            <Heading size="sm">24/7 LaunchB0xx Support team</Heading>
-            <Text textDecoration="underline">
-              Around the clock project support
-            </Text>
+            <Heading size="sm">Leonardo AI</Heading>
+            <Text textDecoration="underline">Ai Image Generation</Text>
           </CardFooter>
         </Card>
         <Card maxW="sm">
           <CardBody>
-            <Image src={ImageBaptLabs} alt="BaptLabs.png" />
+            <Image src={ImageCanva} alt="Canva.png" />
           </CardBody>
           <CardFooter>
-            <Heading size="sm">Bapt Labs</Heading>
-            <Text textDecoration="underline">Bapt LABS Documentation</Text>
+            <Heading size="sm">Canva</Heading>
+            <Text textDecoration="underline">Canva Photo Editor</Text>
           </CardFooter>
         </Card>
         <Card maxW="sm">
@@ -88,4 +94,4 @@ const PlatformSupport = () => {
   );
 };
 
-export default PlatformSupport;
+export default RealEstate;
