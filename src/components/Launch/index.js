@@ -7,6 +7,7 @@ import {
   Text,
   Heading,
   theme,
+  GridItem,
 } from '@chakra-ui/react';
 import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react';
 import {
@@ -20,94 +21,73 @@ import {
 const Launch = () => {
   return (
     <Box
+      mt="5rem"
       w="100%"
-      px={2}
+      px={16}
       py={24}
       bgGradient="linear(to-l, #000, #999)"
-      alignItems="center"
     >
-      <Grid p={1} w="100%" textAlign="center">
-        <Heading lineHeight="tall" color="#000">
-          Launch.
-        </Heading>
+      <Heading size="2xl" lineHeight="tall" color="#000" textAlign="center">
+        Launch.
+      </Heading>
+      <Text
+        fontFamily="'Josefin Slab', serif"
+        m={4}
+        textAlign="center"
+        textColor="#000"
+        fontSize="24px"
+      >
+        Let's get you paid.
+      </Text>
+      <Grid px={4} templateColumns="repeat(3, 1fr)" gap={8}>
+        <GridItem colSpan={{ base: 3, md: 1 }}>
+          <Heading size="md" textAlign="center">
+            Assembly
+          </Heading>
+          <UnorderedList>
+            <ListItem>Documents</ListItem>
+            <ListItem>Online</ListItem>
+            <ListItem>Token</ListItem>
+            <ListItem>DAO</ListItem>
+          </UnorderedList>
+          <Button as={Link} href="/launch/assembly">
+            Aggregate
+          </Button>
+        </GridItem>
+        <GridItem colSpan={{ base: 3, md: '1' }}>
+          <Heading size="md" textAlign="center">
+            Launch
+          </Heading>
+          <UnorderedList>
+            <ListItem>Send it.</ListItem>
+          </UnorderedList>
+          <Button as={Link} href="/launch/launchsub">
+            Send
+          </Button>
+        </GridItem>
+        <GridItem colSpan={{ base: 3, md: '1' }}>
+          <Heading size="md" textAlign="center">
+            Maintain
+          </Heading>
+          <UnorderedList>
+            <ListItem>Bugs</ListItem>
+            <ListItem>Customer service</ListItem>
+            <ListItem>Upgrade</ListItem>
+            <ListItem>Overhaul</ListItem>
+          </UnorderedList>
+          <Button as={Link} href="/launch/maintain">
+            Edit
+          </Button>
+        </GridItem>
       </Grid>
-      <Grid alignItems="center" p={4}>
-        <Text
-          fontFamily="'Josefin Slab', serif"
-          m={4}
-          textAlign="center"
-          textColor="#000"
-        >
-          Let's get you paid.
-        </Text>
-      </Grid>
-      <Grid spacing={4} px={4} templateColumns="repeat(3, 1fr)" gap={8}>
-        <Card>
-          <CardHeader>
-            <Heading size="md" textAlign="center">
-              Assembly
-            </Heading>
-          </CardHeader>
-          <CardBody textAlign="center">
-            <UnorderedList>
-              <ListItem>Documents</ListItem>
-              <ListItem>Online</ListItem>
-              <ListItem>Token</ListItem>
-              <ListItem>DAO</ListItem>
-            </UnorderedList>
-          </CardBody>
-          <CardFooter>
-            <Button as={Link} href="/launch/assembly">
-              Aggregate
-            </Button>
-          </CardFooter>
-        </Card>
-        <Card>
-          <CardHeader>
-            <Heading size="md" textAlign="center">
-              Launch
-            </Heading>
-          </CardHeader>
-          <CardBody textAlign="center">
-            <UnorderedList>
-              <ListItem>Send it.</ListItem>
-            </UnorderedList>
-          </CardBody>
-          <CardFooter>
-            <Button as={Link} href="/launch/launchsub">
-              Send
-            </Button>
-          </CardFooter>
-        </Card>
-        <Card>
-          <CardHeader>
-            <Heading size="md" textAlign="center">
-              Maintain
-            </Heading>
-          </CardHeader>
-          <CardBody textAlign="center">
-            <UnorderedList>
-              <ListItem>Bugs</ListItem>
-              <ListItem>Customer service</ListItem>
-              <ListItem>Upgrade</ListItem>
-              <ListItem>Overhaul</ListItem>
-            </UnorderedList>
-          </CardBody>
-          <CardFooter>
-            <Button as={Link} href="/launch/maintain">
-              Edit
-            </Button>
-          </CardFooter>
-        </Card>
-      </Grid>
-      <Grid alignItems="center" p={4}>
-        <Heading textAlign="center" color="#000" size="lg" marginBottom={8}>
+      <Box py={28}>
+        <Heading textAlign="center" size="xl">
           Send it.
         </Heading>
-        <Heading textAlign="center" color="#000" size="md" marginBottom={8}>
+        <Heading textAlign="center" fontSize="24px" my={8}>
           That's it. you did the work.
         </Heading>
-        <Text m="auto" textAlign="center" textColor="#E6E6E6" maxW="80%">
+        <Text textAlign="center" textColor="#E6E6E6" px={24} fontSize="20px">
           Line 'em up, and head em' out.
           <br />
           Time to see what you've built through the eyes of your comunity.
@@ -118,7 +98,7 @@ const Launch = () => {
           If you need to come back and burn it all down so you can rebuild, you
           know where it is.
         </Text>
-      </Grid>
+      </Box>
     </Box>
   );
 };

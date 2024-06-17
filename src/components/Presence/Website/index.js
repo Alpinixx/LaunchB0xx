@@ -1,17 +1,6 @@
 import React from 'react';
-import {
-  Box,
-  Grid,
-  Link,
-  Button,
-  Text,
-  Heading,
-  Image,
-  Stack,
-  theme,
-  GridItem,
-} from '@chakra-ui/react';
-import { Card, CardBody, CardFooter } from '@chakra-ui/react';
+import { NavLink } from 'react-router-dom';
+import { Box, Grid, GridItem, Heading, Text, Image } from '@chakra-ui/react';
 
 import ImageWebsite from '../../../assets/Website.png';
 import ImageLaunchB0xxSupportTeam from '../../../assets/LaunchB0xxSupportTeam.png';
@@ -20,15 +9,23 @@ import ImageAptosKnowledgeBase3 from '../../../assets/AptosKnowledgeBase3.png';
 
 const Website = () => {
   return (
-    <Box p={12}>
-      <Grid templateColumns="repeat(2, 1fr)" gap={24} p={2}>
-        <GridItem colSpan={1}>
+    <Box mt="5rem" p={16}>
+      <Grid templateColumns="repeat(2, 1fr)" gap={32} p={2} mb={12}>
+        <GridItem
+          colSpan={{ base: 2, md: 2, lg: 1 }}
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+        >
           <Image borderRadius="12px" w="100%" src={ImageWebsite} />
         </GridItem>
-        <GridItem colSpan={1}>
+        <GridItem colSpan={{ base: 2, md: 2, lg: 1 }}>
           <Heading size="lg">Contracts.</Heading>
-          <Text>Portals to top choices within the Aptos ecosystem.</Text>
-          <Text>
+          <Text fontSize="16px" color="#828282" textAlign="center" my={6}>
+            Portals to top choices within the Aptos ecosystem.
+          </Text>
+          <Text fontSize="20px" color="#828282">
             Having a website for an emerging blockchain project provides a
             professional online presence, showcasing project details, updates,
             and resources. It boosts visibility, credibility, and user trust.
@@ -36,49 +33,100 @@ const Website = () => {
             developers, and potential investors, ultimately driving platform
             adoption and community growth.
           </Text>
-          <Text>
-            Below are links to resources and support within our platform and the
-            Aptos sphere.
+          <Text fontSize="16px" color="#828282" textAlign="center" mt={6}>
+            Below are links to DAO information and creation within the Aptos
+            sphere.
           </Text>
         </GridItem>
       </Grid>
-      <Grid templateColumns="repeat(3, 1fr)" gap={1} p={2}>
-        <GridItem colSpan={3}>
-          <Text>Aptos Ecosytem Portals:</Text>
+      <Text fontSize="24px" p={2}>
+        Aptos Ecosytem Portals:
+      </Text>
+      <Grid
+        templateColumns="repeat(3, 1fr)"
+        gap={8}
+        p={{ base: '4rem', md: 2, lg: 2 }}
+      >
+        <GridItem
+          colSpan={{ base: 3, md: 1 }}
+          as={NavLink}
+          cursor="pointer"
+          to="#"
+          target="_blank"
+          _hover={{ shadow: 'lg' }}
+          transition="all 0.3s ease"
+          borderRadius="8px"
+        >
+          <Image
+            src={ImageLaunchB0xxSupportTeam}
+            alt="Msafe.png"
+            borderRadius="8px"
+          />
+          <Heading size="20px" p={3}>
+            24/7 LaunchB0xx Support team
+          </Heading>
+          <Text
+            size="20px"
+            px={3}
+            pb={3}
+            color="#82282"
+            textDecoration="underline"
+          >
+            Around the clock project support
+          </Text>
         </GridItem>
-        <Card maxW="sm">
-          <CardBody>
-            <Image src={ImageLaunchB0xxSupportTeam} alt="BaptLabs.png" />
-          </CardBody>
-          <CardFooter>
-            <Heading size="sm">24/7 LaunchB0xx Support Team</Heading>
-            <Text textDecoration="underline">
-              Around the clock project support
-            </Text>
-          </CardFooter>
-        </Card>
-        <Card maxW="sm">
-          <CardBody>
-            <Image src={ImageBaptLabs} alt="BaptLabs.png" />
-          </CardBody>
-          <CardFooter>
-            <Heading size="sm">Bap Labs</Heading>
-            <Text textDecoration="underline">Bapt LABS Documentation</Text>
-          </CardFooter>
-        </Card>
-        <Card maxW="sm">
-          <CardBody>
-            <Image
-              src={ImageAptosKnowledgeBase3}
-              alt="AptosKnowledgeBase4.png"
-            />
-            <Heading size="sm">Aptos Knowledge Base</Heading>
-            <Text textDecoration="underline">
-              Contribute to the Aptos Ecosystem
-            </Text>
-          </CardBody>
-          <CardFooter></CardFooter>
-        </Card>
+        <GridItem
+          colSpan={{ base: 3, md: 1 }}
+          as={NavLink}
+          cursor="pointer"
+          to="https://docs.baptlabs.com"
+          target="_blank"
+          _hover={{ shadow: 'lg' }}
+          transition="all 0.3s ease"
+          borderRadius="8px"
+        >
+          <Image src={ImageBaptLabs} alt="BaptLabs.png" borderRadius="8px" />
+          <Heading size="20px" p={3}>
+            Bapt Labs
+          </Heading>
+          <Text
+            size="20px"
+            px={3}
+            pb={3}
+            color="#82282"
+            textDecoration="underline"
+          >
+            Bapt LABS Documentation
+          </Text>
+        </GridItem>
+        <GridItem
+          colSpan={{ base: 3, md: 1 }}
+          as={NavLink}
+          cursor="pointer"
+          to="https://aptos.dev"
+          target="_blank"
+          _hover={{ shadow: 'lg' }}
+          transition="all 0.3s ease"
+          borderRadius="8px"
+        >
+          <Image
+            src={ImageAptosKnowledgeBase3}
+            alt="AptosKnowledgeBase3.png"
+            borderRadius="8px"
+          />
+          <Heading size="20px" p={3}>
+            Aptos Knowledge Base
+          </Heading>
+          <Text
+            size="20px"
+            px={3}
+            pb={3}
+            color="#82282"
+            textDecoration="underline"
+          >
+            Contribute to the Aptos Ecosystem
+          </Text>
+        </GridItem>
       </Grid>
     </Box>
   );

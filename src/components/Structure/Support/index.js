@@ -2,12 +2,12 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Box, Grid, GridItem, Heading, Text, Image } from '@chakra-ui/react';
 
-import ImageMarketing from '../../../assets/Marketing.png';
+import ImageSupport from '../../../assets/Support.png';
 import ImageLaunchB0xx from '../../../assets/Launchb0xx.png';
 import ImageBaptLabs from '../../../assets/BaptLabs.png';
 import ImageAptosKnowledgeBase3 from '../../../assets/AptosKnowledgeBase3.png';
 
-const Marketing = () => {
+const Support = () => {
   return (
     <Box mt="5rem" p={16}>
       <Grid templateColumns="repeat(2, 1fr)" gap={32} p={2} mb={12}>
@@ -18,22 +18,23 @@ const Marketing = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Image borderRadius="12px" w="100%" src={ImageMarketing} />
+          <Image
+            borderRadius="12px"
+            src={ImageSupport}
+            alt="Support.png: Platform Support page image"
+          />
         </GridItem>
         <GridItem colSpan={{ base: 2, md: 2, lg: 1 }}>
-          <Heading size="lg">Marketing.</Heading>
+          <Heading size="lg">Platform Support</Heading>
           <Text fontSize="16px" color="#828282" textAlign="center" my={6}>
             Portals to top choices within the Aptos ecosystem.
           </Text>
           <Text fontSize="20px" color="#828282">
-            Good marketing skills are essential for a crypto project to succeed
-            by building brand awareness, attracting investors, and expanding the
-            user base. Effective marketing strategies, such as social media
-            campaigns, influencer partnerships, and community engagement, can
-            significantly impact a project's growth. For example, the marketing
-            campaign for the cryptocurrency Aptos helped propel it from a new
-            project to a widely recognized digital asset, demonstrating the
-            power of marketing in the crypto space.
+            Customer service and other resources provide critical support for a
+            hard-working blockchain project. They enhance user experience,
+            resolve issues promptly, and build trust. Access to resources like
+            tutorials and documentation accelerates development, aiding in
+            platform adoption and community growth.
           </Text>
           <Text fontSize="16px" color="#828282" textAlign="center" mt={6}>
             Below are links to DAO information and creation within the Aptos
@@ -53,7 +54,7 @@ const Marketing = () => {
           colSpan={{ base: 3, md: 1 }}
           as={NavLink}
           cursor="pointer"
-          to="#"
+          to="https://m-safe.io"
           target="_blank"
           _hover={{ shadow: 'lg' }}
           transition="all 0.3s ease"
@@ -77,7 +78,7 @@ const Marketing = () => {
           colSpan={{ base: 3, md: 1 }}
           as={NavLink}
           cursor="pointer"
-          to="https://docs.baptlabs.com/"
+          to="https://thala.fi"
           target="_blank"
           _hover={{ shadow: 'lg' }}
           transition="all 0.3s ease"
@@ -101,7 +102,7 @@ const Marketing = () => {
           colSpan={{ base: 3, md: 1 }}
           as={NavLink}
           cursor="pointer"
-          to="https://aptos.dev/"
+          to="https://aptos.dev/concepts/governance/"
           target="_blank"
           _hover={{ shadow: 'lg' }}
           transition="all 0.3s ease"
@@ -130,4 +131,4 @@ const Marketing = () => {
   );
 };
 
-export default Marketing;
+export default Support;
