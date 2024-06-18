@@ -6,8 +6,6 @@ import {
   Button,
   Text,
   Input,
-  Heading,
-  Highlight,
   HStack,
   Divider,
 } from '@chakra-ui/react';

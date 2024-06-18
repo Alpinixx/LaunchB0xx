@@ -1,9 +1,13 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { Box, Grid, GridItem, Heading, Text, Image } from '@chakra-ui/react';
+import { Box, Image } from '@chakra-ui/react';
+import ImageError from '../../assets/error-page.gif';
 
 const NotFound = () => {
-  return <Heading size="4xl">404 Page Found</Heading>;
+  return (
+    <Box w="100%">
+      <Image src={ImageError} m="auto" />
+    </Box>
+  );
 };
 
 export default NotFound;

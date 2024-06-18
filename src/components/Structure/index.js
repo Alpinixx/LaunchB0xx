@@ -1,126 +1,120 @@
 import React from 'react';
-import {
-  Box,
-  Grid,
-  Link,
-  Button,
-  Text,
-  Heading,
-  theme,
-} from '@chakra-ui/react';
-import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react';
-import {
-  List,
-  ListItem,
-  ListIcon,
-  OrderedList,
-  UnorderedList,
-} from '@chakra-ui/react';
+import { NavLink } from 'react-router-dom';
+import { Box, Grid, GridItem, Button, Text, Heading } from '@chakra-ui/react';
 
 const Structure = () => {
   return (
     <Box
+      mt="5rem"
       w="100%"
-      px={2}
+      px={16}
       py={24}
       bgGradient="linear(to-l, #000, #999)"
-      alignItems="center"
     >
-      <Grid p={1} w="100%" textAlign="center">
-        <Heading lineHeight="tall" color="#000">
-          Structure.
-        </Heading>
-      </Grid>
-      <Grid alignItems="center" p={4}>
-        <Text
-          fontFamily="'Josefin Slab', serif"
-          m={4}
+      <Heading size="2xl" lineHeight="tall" color="#000" textAlign="center">
+        Structure.
+      </Heading>
+      <Text
+        fontFamily="'Josefin Slab', serif"
+        m={4}
+        textAlign="center"
+        textColor="#000"
+        fontSize="24px"
+      >
+        Projects last longer when they have solid structure.
+      </Text>
+      <Grid px={4} templateColumns="repeat(3, 1fr)" gap={8} my={28}>
+        <GridItem
+          colSpan={{ base: 3, md: 1 }}
+          bg="#fff"
+          borderRadius="8px"
+          p={12}
           textAlign="center"
-          textColor="#000"
+          display="flex"
+          flexDirection="column"
         >
-          Project last longer when they have solid structure.
-        </Text>
+          <Heading size="md">DAO</Heading>
+          <Box my={12}>
+            <Text>Decentralization</Text>
+            <Text>Transparency</Text>
+            <Text>Incentive</Text>
+            <Text>Funding</Text>
+          </Box>
+          <Button
+            as={NavLink}
+            w="100%"
+            to="/structure/dao"
+            bg="#000"
+            color="#fff"
+          >
+            Create
+          </Button>
+        </GridItem>
+        <GridItem
+          colSpan={{ base: 3, md: 1 }}
+          bg="#fff"
+          borderRadius="8px"
+          p={12}
+          textAlign="center"
+          display="flex"
+          flexDirection="column"
+        >
+          <Heading size="md">Team Solidarity</Heading>
+          <Box my={12}>
+            <Text>Collaboration</Text>
+            <Text>Progress</Text>
+            <Text>Decide</Text>
+            <Text>Chat</Text>
+          </Box>
+          <Button
+            as={NavLink}
+            w="100%"
+            to="/structure/team"
+            bg="#000"
+            color="#fff"
+          >
+            Collaborate
+          </Button>
+        </GridItem>
+        <GridItem
+          colSpan={{ base: 3, md: 1 }}
+          bg="#fff"
+          borderRadius="8px"
+          p={12}
+          textAlign="center"
+          display="flex"
+          flexDirection="column"
+        >
+          <Heading size="md">Platform Support</Heading>
+          <Box my={12}>
+            <Text>Resource</Text>
+            <Text>Platform</Text>
+            <Text>Knowledge</Text>
+            <Text>Support</Text>
+          </Box>
+          <Button
+            as={NavLink}
+            w="100%"
+            to="/structure/support"
+            bg="#000"
+            color="#fff"
+          >
+            Chat
+          </Button>
+        </GridItem>
       </Grid>
-      <Grid spacing={4} px={4} templateColumns="repeat(3, 1fr)" gap={8}>
-        <Card>
-          <CardHeader>
-            <Heading size="md" textAlign="center">
-              Decentralized Autonomous Organization
-            </Heading>
-          </CardHeader>
-          <CardBody textAlign="center">
-            <UnorderedList>
-              <ListItem>Decentralization</ListItem>
-              <ListItem>Transparency</ListItem>
-              <ListItem>Incentive</ListItem>
-              <ListItem>Funding</ListItem>
-            </UnorderedList>
-          </CardBody>
-          <CardFooter>
-            <Button as={Link} href="/structure/daostructure">
-              Create
-            </Button>
-          </CardFooter>
-        </Card>
-        <Card>
-          <CardHeader>
-            <Heading size="md" textAlign="center">
-              Team Solidarity
-            </Heading>
-          </CardHeader>
-          <CardBody textAlign="center">
-            <UnorderedList>
-              <ListItem>Colloboration</ListItem>
-              <ListItem>Progress</ListItem>
-              <ListItem>Decide</ListItem>
-              <ListItem>Chat</ListItem>
-            </UnorderedList>
-          </CardBody>
-          <CardFooter>
-            <Button as={Link} href="/structure/teamsolidarity">
-              Colloboration
-            </Button>
-          </CardFooter>
-        </Card>
-        <Card>
-          <CardHeader>
-            <Heading size="md" textAlign="center">
-              Platform Support
-            </Heading>
-          </CardHeader>
-          <CardBody textAlign="center">
-            <UnorderedList>
-              <ListItem>Resource</ListItem>
-              <ListItem>Platform</ListItem>
-              <ListItem>Knowledge</ListItem>
-              <ListItem>Support</ListItem>
-            </UnorderedList>
-          </CardBody>
-          <CardFooter>
-            <Button as={Link} href="/structure/platformsupport">
-              Chat
-            </Button>
-          </CardFooter>
-        </Card>
-      </Grid>
-      <Grid alignItems="center" p={4}>
-        <Heading textAlign="center" color="#000" size="lg" marginBottom={8}>
-          Structure First.
+      <Box pb={28} textAlign="center">
+        <Heading size="xl">Structure First.</Heading>
+        <Heading fontSize="24px" my={8}>
+          Why ‘Structure first’?
         </Heading>
-        <Heading textAlign="center" color="#000" size="md" marginBottom={8}>
-          Why 'Structure first'?
-        </Heading>
-        <Text m="auto" textAlign="center" textColor="#E6E6E6" maxW="80%">
-          Why lay a foundation before constructing a skyscraper?
-          <br />
-          Because of very good reasons. Set your foundation first; and you will
-          go far.
-          <br />
-          We have added tools here for your ease of framework.
-          <br />
-          Go on it. check them out and begin your journey the solid way.
+        <Text textColor="#E6E6E6" px={24} fontSize="20px">
+          Why lay a foundation before constructing a skyscraper? Because of very
+          good reasons. Set your foundation first; and you will go far. We have
+          added tools here for your ease of framework. Go on in. check them out
+          and begin your journey the solid way.
         </Text>
-      </Grid>
+      </Box>
     </Box>
   );
 };

@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import {
   Box,
   Grid,
@@ -24,7 +23,7 @@ const B0xx = () => {
     <Box mt="5rem" p={16}>
       <Box
         minH="80vh"
-        maxHeight="199vh"
+        maxHeight="100vh"
         display="flex"
         flexDirection="column"
         justifyContent="center"
@@ -32,77 +31,193 @@ const B0xx = () => {
         textAlign="center"
         borderRadius="8px"
         bgImg={ImageShopTitle}
+        bgRepeat="no-repeat"
+        bgSize="100% 100%"
       >
-        <Heading size={{ base: '3xl', lg: '4xl' }}>Shop title</Heading>
-        <Text maxWidth={800} color="#828282" mx="auto" mt={8} fontSize="24px">
+        <Heading size={{ base: '3xl', lg: '4xl' }} color="#fff">
+          Shop title
+        </Heading>
+        <Text maxWidth={800} color="#fff" mx="auto" my={8} fontSize="24px">
           Subheading with description of your shopping site
         </Text>
-        <Button bg="#000">Visit</Button>
+        <Button bg="#000" color="#fff">
+          Button
+        </Button>
       </Box>
-      <Grid templateColumns="repeat(3, 1fr)" gap={12}>
-        <GridItem colSpan={1}>
+      <Heading size="lg" mt={24} mb={8}>
+        Heading
+      </Heading>
+      <Grid templateColumns="repeat(6, 1fr)" gap={12}>
+        <GridItem colSpan={{ base: 6, md: 3, lg: 2 }}>
           <Image
             borderRadius="8px"
             w="100%"
             src={ImageF1}
             alt="workbench.png"
           />
-          <Heading fontSize="20px"></Heading>
-          <Text color="#828282" mx="auto" mt={8} fontSize="20px"></Text>
+          <Heading fontSize="20px" my={4}>
+            Product
+          </Heading>
+          <Text color="#828282" mx="auto" fontSize="20px">
+            Description of 1st product
+          </Text>
+          <Heading fontSize="20px" my={4}>
+            $10.99
+          </Heading>
         </GridItem>
-        <GridItem colSpan={1}>
+        <GridItem colSpan={{ base: 6, md: 3, lg: 2 }}>
           <Image
             borderRadius="8px"
             w="100%"
             src={ImageF2}
             alt="workbench.png"
           />
-          <Heading fontSize="20px"></Heading>
-          <Text color="#828282" mx="auto" mt={8} fontSize="20px"></Text>
+          <Heading fontSize="20px" my={4}>
+            Product
+          </Heading>
+          <Text color="#828282" mx="auto" fontSize="20px">
+            Description of 2nd product
+          </Text>
+          <Heading fontSize="20px" my={4}>
+            $10.99
+          </Heading>
         </GridItem>
-        <GridItem colSpan={1}>
+        <GridItem colSpan={{ base: 6, md: 3, lg: 2 }}>
           <Image
             borderRadius="8px"
             w="100%"
             src={ImageF3}
             alt="workbench.png"
           />
-          <Heading fontSize="20px"></Heading>
-          <Text color="#828282" mx="auto" mt={8} fontSize="20px"></Text>
+          <Heading fontSize="20px" my={4}>
+            Product
+          </Heading>
+          <Text color="#828282" mx="auto" fontSize="20px">
+            Description of 3rd product
+          </Text>
+          <Heading fontSize="20px" my={4}>
+            $10.99
+          </Heading>
         </GridItem>
-        <GridItem colSpan={1}>
+        <GridItem colSpan={{ base: 6, md: 3, lg: 2 }}>
           <Image
             borderRadius="8px"
             w="100%"
             src={ImageF4}
             alt="workbench.png"
           />
-          <Heading fontSize="20px"></Heading>
-          <Text color="#828282" mx="auto" mt={8} fontSize="20px"></Text>
+          <Heading fontSize="20px" my={4}>
+            Product
+          </Heading>
+          <Text color="#828282" mx="auto" fontSize="20px">
+            Description of 4th product
+          </Text>
+          <Heading fontSize="20px" my={4}>
+            $10.99
+          </Heading>
         </GridItem>
-        <GridItem colSpan={1}>
+        <GridItem colSpan={{ base: 6, md: 3, lg: 2 }}>
           <Image
             borderRadius="8px"
             w="100%"
             src={ImageF5}
             alt="workbench.png"
           />
-          <Heading fontSize="20px"></Heading>
-          <Text color="#828282" mx="auto" mt={8} fontSize="20px"></Text>
+          <Heading fontSize="20px" my={4}>
+            Product
+          </Heading>
+          <Text color="#828282" mx="auto" fontSize="20px">
+            Description of 5th product
+          </Text>
+          <Heading fontSize="20px" my={4}>
+            $10.99
+          </Heading>
         </GridItem>
-        <GridItem colSpan={1}>
+        <GridItem colSpan={{ base: 6, md: 3, lg: 2 }}>
           <Image
             borderRadius="8px"
             w="100%"
             src={ImageF6}
             alt="workbench.png"
           />
-          <Heading fontSize="20px"></Heading>
-          <Text color="#828282" mx="auto" mt={8} fontSize="20px"></Text>
+          <Heading fontSize="20px" my={4}>
+            Product
+          </Heading>
+          <Text color="#828282" mx="auto" fontSize="20px">
+            Description of 6th product
+          </Text>
+          <Heading fontSize="20px" my={4}>
+            $10.99
+          </Heading>
         </GridItem>
       </Grid>
 
-      <Grid templateColumns="repeat(2, 1fr)" gap={16} p={16}></Grid>
+      <Heading size="lg" mt={24} mb={8}>
+        Heading
+      </Heading>
+      <Grid
+        templateRows="repeat(2, 1fr>"
+        templateColumns="repeat(5, 1fr)"
+        gap={16}
+        p={16}
+      ></Grid>
+      <Grid
+        templateRows="repeat(2, 1fr)"
+        templateColumns="repeat(10, 1fr)"
+        gap={4}
+      >
+        <GridItem rowSpan={2} colSpan={{ base: 10, md: 6 }}>
+          <Image
+            borderRadius="16px"
+            src={ImageFHeading}
+            w="100%"
+            alt="workbench.png"
+          />
+          <Heading fontSize="20px" my={4}>
+            Featured Product
+          </Heading>
+          <Text color="#828282" mx="auto" fontSize="20px">
+            Description of 6th product
+          </Text>
+          <Heading fontSize="20px" my={4}>
+            $10.99
+          </Heading>
+        </GridItem>
+        <GridItem colSpan={{ base: 10, sm: 5, md: 4 }}>
+          <Image
+            borderRadius="8px"
+            w="100%"
+            src={ImageF1}
+            alt="workbench.png"
+          />
+          <Heading fontSize="20px" my={4}>
+            Product
+          </Heading>
+          <Text color="#828282" mx="auto" fontSize="20px">
+            Description of 6th product
+          </Text>
+          <Heading fontSize="20px" my={4}>
+            $10.99
+          </Heading>
+        </GridItem>
+        <GridItem colSpan={{ base: 10, sm: 5, md: 4 }}>
+          <Image
+            borderRadius="8px"
+            w="100%"
+            src={ImageF4}
+            alt="workbench.png"
+          />
+          <Heading fontSize="20px" my={4}>
+            Product
+          </Heading>
+          <Text color="#828282" mx="auto" fontSize="20px">
+            Description of 6th product
+          </Text>
+          <Heading fontSize="20px" my={4}>
+            $10.99
+          </Heading>
+        </GridItem>
+      </Grid>
     </Box>
   );
 };

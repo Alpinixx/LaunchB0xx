@@ -1,168 +1,173 @@
 import React from 'react';
-import {
-  Box,
-  Grid,
-  Link,
-  Button,
-  Text,
-  Heading,
-  theme,
-} from '@chakra-ui/react';
-import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react';
-import {
-  List,
-  ListItem,
-  ListIcon,
-  OrderedList,
-  UnorderedList,
-} from '@chakra-ui/react';
+import { NavLink } from 'react-router-dom';
+import { Box, Grid, GridItem, Button, Text, Heading } from '@chakra-ui/react';
 
 const Development = () => {
   return (
     <Box
+      mt="5rem"
       w="100%"
-      px={2}
+      px={16}
       py={24}
       bgGradient="linear(to-l, #000, #999)"
-      alignItems="center"
     >
-      <Grid p={1} w="100%" textAlign="center">
-        <Heading lineHeight="tall" color="#000">
-          Development.
-        </Heading>
-      </Grid>
-      <Grid alignItems="center" p={4}>
-        <Text
-          fontFamily="'Josefin Slab', serif"
-          m={4}
+      <Heading size="2xl" lineHeight="tall" color="#000" textAlign="center">
+        Development.
+      </Heading>
+      <Text
+        fontFamily="'Josefin Slab', serif"
+        m={4}
+        textAlign="center"
+        textColor="#000"
+        fontSize="24px"
+      >
+        Get in the mud and dig out that gold.
+      </Text>
+      <Grid px={4} templateColumns="repeat(6, 1fr)" gap={8} my={28}>
+        <GridItem
+          colSpan={{ base: 6, md: 2 }}
+          bg="#fff"
+          borderRadius="8px"
+          p={12}
           textAlign="center"
-          textColor="#000"
+          display="flex"
+          flexDirection="column"
         >
-          Get in the mud and dig out that gold.
-        </Text>
+          <Heading size="md">Document</Heading>
+          <Box my={12}>
+            <Text>Decentralization</Text>
+            <Text>Transparency</Text>
+            <Text>Inform</Text>
+            <Text>Store</Text>
+          </Box>
+          <Button
+            as={NavLink}
+            w="100%"
+            to="/development/documentation"
+            bg="#000"
+            color="#fff"
+          >
+            Scribe
+          </Button>
+        </GridItem>
+        <GridItem
+          colSpan={{ base: 6, md: 2 }}
+          bg="#fff"
+          borderRadius="8px"
+          p={12}
+          textAlign="center"
+          display="flex"
+          flexDirection="column"
+        >
+          <Heading size="md">Contract</Heading>
+          <Box my={12}>
+            <Text> </Text>
+            <Text>Non-Fungible Tokens</Text>
+            <Text>Fungible Tokens</Text>
+            <Text>Trust</Text>
+            <Text>DeFi</Text>
+          </Box>
+          <Button
+            as={NavLink}
+            w="100%"
+            to="/development/contracts"
+            bg="#000"
+            color="#fff"
+          >
+            Build
+          </Button>
+        </GridItem>
+        <GridItem
+          colSpan={{ base: 6, md: 2 }}
+          bg="#fff"
+          borderRadius="8px"
+          p={12}
+          textAlign="center"
+          display="flex"
+          flexDirection="column"
+        >
+          <Heading size="md">Graphics</Heading>
+          <Box my={12}>
+            <Text>Design</Text>
+            <Text>Align</Text>
+            <Text>Assemble</Text>
+            <Text>Print</Text>
+          </Box>
+          <Button
+            as={NavLink}
+            w="100%"
+            to="/development/graphics"
+            bg="#000"
+            color="#fff"
+          >
+            Paint
+          </Button>
+        </GridItem>
+        <GridItem
+          colSpan={{ base: 6, md: 3 }}
+          bg="#fff"
+          borderRadius="8px"
+          p={12}
+          textAlign="center"
+          display="flex"
+          flexDirection="column"
+        >
+          <Heading size="md">Graphics</Heading>
+          <Box my={12}>
+            <Text>Narrative</Text>
+            <Text>Design</Text>
+            <Text>Characters</Text>
+            <Text>Trade</Text>
+          </Box>
+          <Button
+            as={NavLink}
+            w="100%"
+            to="/development/gamification"
+            bg="#000"
+            color="#fff"
+          >
+            Coming Soon!
+          </Button>
+        </GridItem>
+        <GridItem
+          colSpan={{ base: 6, md: 3 }}
+          bg="#fff"
+          borderRadius="8px"
+          p={12}
+          textAlign="center"
+          display="flex"
+          flexDirection="column"
+        >
+          <Heading size="md">Real Estate Fractionalization</Heading>
+          <Box my={12}>
+            <Text>Contract</Text>
+            <Text>Transfer</Text>
+            <Text>Partition</Text>
+            <Text>Zoning</Text>
+          </Box>
+          <Button
+            as={NavLink}
+            w="100%"
+            to="/development/realestate"
+            bg="#000"
+            color="#fff"
+          >
+            Coming Soon!
+          </Button>
+        </GridItem>
       </Grid>
-      <Grid spacing={4} px={4} templateColumns="repeat(3, 1fr)" gap={8}>
-        <Card>
-          <CardHeader>
-            <Heading size="md" textAlign="center">
-              Documentation
-            </Heading>
-          </CardHeader>
-          <CardBody textAlign="center">
-            <UnorderedList>
-              <ListItem>Decentralization</ListItem>
-              <ListItem>Transparency</ListItem>
-              <ListItem>Inform</ListItem>
-              <ListItem>Store</ListItem>
-            </UnorderedList>
-          </CardBody>
-          <CardFooter>
-            <Button as={Link} href="/development/documentation">
-              Scribe
-            </Button>
-          </CardFooter>
-        </Card>
-        <Card>
-          <CardHeader>
-            <Heading size="md" textAlign="center">
-              Contract
-            </Heading>
-          </CardHeader>
-          <CardBody textAlign="center">
-            <UnorderedList>
-              <ListItem>Non-Fungible Tokens</ListItem>
-              <ListItem>Fungible Tokens</ListItem>
-              <ListItem>Trust</ListItem>
-              <ListItem>DeFi</ListItem>
-            </UnorderedList>
-          </CardBody>
-          <CardFooter>
-            <Button as={Link} href="/development/contracts">
-              Build
-            </Button>
-          </CardFooter>
-        </Card>
-        <Card>
-          <CardHeader>
-            <Heading size="md" textAlign="center">
-              Graphics
-            </Heading>
-          </CardHeader>
-          <CardBody textAlign="center">
-            <UnorderedList>
-              <ListItem>Design</ListItem>
-              <ListItem>Align</ListItem>
-              <ListItem>Assemble</ListItem>
-              <ListItem>Print</ListItem>
-            </UnorderedList>
-          </CardBody>
-          <CardFooter>
-            <Button as={Link} href="/development/graphics">
-              Paint
-            </Button>
-          </CardFooter>
-        </Card>
-      </Grid>
-      <Grid spacing={4} px={4} templateColumns="repeat(2, 1fr)" gap={8}>
-        <Card>
-          <CardHeader>
-            <Heading size="md" textAlign="center">
-              Gamification
-            </Heading>
-          </CardHeader>
-          <CardBody textAlign="center">
-            <UnorderedList>
-              <ListItem>Narrative</ListItem>
-              <ListItem>Characters</ListItem>
-              <ListItem>Design</ListItem>
-              <ListItem>Trade</ListItem>
-            </UnorderedList>
-          </CardBody>
-          <CardFooter>
-            <Button as={Link} href="/development/gamification">
-              Coming Soon!
-            </Button>
-          </CardFooter>
-        </Card>
-        <Card>
-          <CardHeader>
-            <Heading size="md" textAlign="center">
-              Real Estate Fractionalization
-            </Heading>
-          </CardHeader>
-          <CardBody textAlign="center">
-            <UnorderedList>
-              <ListItem>Contract</ListItem>
-              <ListItem>Partition</ListItem>
-              <ListItem>Transfer</ListItem>
-              <ListItem>Zoning</ListItem>
-            </UnorderedList>
-          </CardBody>
-          <CardFooter>
-            <Button as={Link} href="/development/realestate">
-              Coming Soon!
-            </Button>
-          </CardFooter>
-        </Card>
-      </Grid>
-      <Grid alignItems="center" p={4}>
-        <Heading textAlign="center" color="#000" size="lg" marginBottom={8}>
-          Dev next.
+      <Box pb={28} textAlign="center">
+        <Heading size="xl">Dev next.</Heading>
+        <Heading fontSize="24px" my={8}>
+          Here’s where the magic begins.
         </Heading>
-        <Heading textAlign="center" color="#000" size="md" marginBottom={8}>
-          Here's where the magic begins.
-        </Heading>
-        <Text m="auto" textAlign="center" textColor="#E6E6E6" maxW="80%">
-          We have made some valuable partnerships for your benefit.
-          <br />
-          If you are already a blockchain guru, you know what to do.
-          <br />
-          If you are just starting out, or have a few clues, no worries, we got
-          you.
-          <br />
-          We have portals to walk through.
+        <Text textColor="#E6E6E6" px={24} fontSize="20px">
+          We have made some valuable partnerships for your benefit. If you are
+          already a blockchain guru, you know what to do. if you are just
+          starting out, or have a few clues, no worries, we got you. We have
+          portals to walk through.
         </Text>
-      </Grid>
+      </Box>
     </Box>
   );
 };

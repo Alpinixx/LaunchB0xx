@@ -45,95 +45,171 @@ const Header = () => {
   ].includes(location.pathname)
     ? '#454545'
     : '#fff';
+  const menuIconColor = [
+    '/launchlanding',
+    '/structure',
+    '/development',
+    '/presence',
+    '/launch',
+  ].includes(location.pathname)
+    ? '#fff'
+    : '#454545';
 
   const hiddenheader = ['/launchpay', '/b0xxpay'].includes(location.pathname)
     ? 'none'
     : 'block';
 
-  const headerStyles = {
-    navItemStyles: {
-      p: 2,
-      m: { base: '1rem', md: '0.5rem', lg: '1rem' },
-      textDecoration: 'none',
-      color: '#000',
-      _hover: {
-        color: '#fff',
-      },
-      transition: 'all 0.3s ease-in-out',
-    },
-  };
-
   return (
     <Box
       as="header"
+      display={hiddenheader}
       bg={headerBgColor}
       color="white"
       w="100%"
+      maxW="1440px"
       h={isScrolled ? '5rem' : '6rem'}
-      p={4}
-      transition="all 0.3s ease-in-out !important"
       position="fixed"
-      display={hiddenheader}
-      zIndex={10}
+      p={4}
       boxShadow="md"
+      transition="all 0.3s ease-in-out !important"
+      zIndex={10}
     >
-      <Grid templateColumns="repeat(2, 1fr)">
-        <GridItem colSpan={1}>
-          <Link as={NavLink} to="/">
-            <Heading
-              size={{ base: 'sm', sm: 'sm', md: 'md', lg: 'md' }}
-              fontWeight="bolder"
-              color="#000"
-              transition="all 0.3s ease-in-out !important"
+      <Grid
+        templateColumns="repeat(4, 1fr)"
+        py={isScrolled ? 3 : 5}
+        transition="all 0.3s ease-in-out !important"
+      >
+        <GridItem
+          colSpan={{ base: 3, md: 1 }}
+          pl={{ base: 32, lg: 12 }}
+          textAlign="center"
+        >
+          <Heading
+            size="md"
+            fontWeight="bolder"
+            color="#000"
+            transition="all 0.3s ease-in-out !important"
+            textDecoration="none"
+            as={NavLink}
+            to="/"
+          >
+            <Highlight
+              query="b0xx"
+              styles={{
+                px: '0',
+                py: '4',
+                rounded: '3px',
+                bg: '#21c5b6',
+                color: '#fff',
+              }}
             >
-              <Highlight
-                query="b0xx"
-                styles={{
-                  px: '0',
-                  py: '4',
-                  rounded: '3px',
-                  bg: '#21c5b6',
-                  color: '#fff',
-                }}
-              >
-                Launchb0xx
-              </Highlight>
-            </Heading>
-          </Link>
+              Launchb0xx
+            </Highlight>
+          </Heading>
         </GridItem>
-        <GridItem colSpan={1} display={{ base: 'none', md: 'inline' }}>
-          <Link as={NavLink} to="/structure">
+        <GridItem
+          colSpan={3}
+          display={{ base: 'none', md: 'inline' }}
+          color="#000"
+          textAlign="right"
+          pr={{ base: 4, lg: 12 }}
+        >
+          <Link
+            as={NavLink}
+            to="/structure"
+            color="#000"
+            textDecoration="none"
+            _hover={{
+              color: '#fff',
+              textDecoration: 'underlined',
+              textDecorationColor: '#fff',
+            }}
+            transition="all 0.3s ease-in-out !important"
+            px={2}
+          >
             Structure
           </Link>
-          <Link as={NavLink} to="/development">
+          <Link
+            as={NavLink}
+            to="/development"
+            color="#000"
+            textDecoration="none"
+            _hover={{
+              color: '#fff',
+              textDecoration: 'underlined',
+              textDecorationColor: '#fff',
+            }}
+            transition="all 0.3s ease-in-out !important"
+            px={2}
+          >
             Development
           </Link>
-          <Link as={NavLink} to="/presence">
+          <Link
+            as={NavLink}
+            to="/presence"
+            color="#000"
+            textDecoration="none"
+            _hover={{
+              color: '#fff',
+              textDecoration: 'underlined',
+              textDecorationColor: '#fff',
+            }}
+            transition="all 0.3s ease-in-out !important"
+            px={2}
+          >
             Presence
           </Link>
-          <Link as={NavLink} to="/launch">
+          <Link
+            as={NavLink}
+            to="/launch"
+            color="#000"
+            textDecoration="none"
+            _hover={{
+              color: '#fff',
+              textDecoration: 'underlined',
+              textDecorationColor: '#fff',
+            }}
+            transition="all 0.3s ease-in-out !important"
+            px={2}
+          >
             Launch
           </Link>
-          <Link as={NavLink} to="/#">
+          <Button color="#fff" bg="#000" as={NavLink} to="/b0xxpay">
             B0xx
-          </Link>
+          </Button>
         </GridItem>
-        <IconButton
-          display={{ base: 'inline', md: 'none' }}
-          icon={<HamburgerIcon />}
-          aria-label="Open Menu"
-          onClick={onOpen}
-          bg="transparent"
-          color="white"
-        />
+        <GridItem
+          colSpan={1}
+          display={{ base: 'flex', md: 'none' }}
+          justifyContent="flex-end"
+        >
+          <IconButton
+            icon={<HamburgerIcon />}
+            aria-label="Open Menu"
+            onClick={onOpen}
+            bg="transparent"
+            color={menuIconColor}
+          />
+        </GridItem>
       </Grid>
       {/* Responsive Drawer */}
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
         <DrawerOverlay>
-          <DrawerContent bg="#454545" p={12}>
+          <DrawerContent
+            bg={headerBgColor}
+            transition="all 0.2s ease-out !important"
+            p={12}
+          >
             <DrawerCloseButton />
             <DrawerHeader textAlign="center" my={12}>
-              <Heading size="md" fontWeight="bolder" color="#000">
+              <Heading
+                size="md"
+                fontWeight="bolder"
+                color="#000"
+                textDecoration="none"
+                as={NavLink}
+                to="/"
+              >
                 <Highlight
                   query="b0xx"
                   styles={{

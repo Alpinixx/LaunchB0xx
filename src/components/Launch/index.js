@@ -1,22 +1,6 @@
 import React from 'react';
-import {
-  Box,
-  Grid,
-  Link,
-  Button,
-  Text,
-  Heading,
-  theme,
-  GridItem,
-} from '@chakra-ui/react';
-import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react';
-import {
-  List,
-  ListItem,
-  ListIcon,
-  OrderedList,
-  UnorderedList,
-} from '@chakra-ui/react';
+import { NavLink } from 'react-router-dom';
+import { Box, Grid, GridItem, Button, Text, Heading } from '@chakra-ui/react';
 
 const Launch = () => {
   return (
@@ -39,64 +23,93 @@ const Launch = () => {
       >
         Let's get you paid.
       </Text>
-      <Grid px={4} templateColumns="repeat(3, 1fr)" gap={8}>
-        <GridItem colSpan={{ base: 3, md: 1 }}>
-          <Heading size="md" textAlign="center">
-            Assembly
-          </Heading>
-          <UnorderedList>
-            <ListItem>Documents</ListItem>
-            <ListItem>Online</ListItem>
-            <ListItem>Token</ListItem>
-            <ListItem>DAO</ListItem>
-          </UnorderedList>
-          <Button as={Link} href="/launch/assembly">
+      <Grid px={4} templateColumns="repeat(3, 1fr)" gap={8} my={28}>
+        <GridItem
+          colSpan={{ base: 3, md: 1 }}
+          bg="#fff"
+          borderRadius="8px"
+          p={12}
+          textAlign="center"
+          display="flex"
+          flexDirection="column"
+        >
+          <Heading size="md">Assembly</Heading>
+          <Box my={12}>
+            <Text>Documents</Text>
+            <Text>Online</Text>
+            <Text>Token</Text>
+            <Text>DAO</Text>
+          </Box>
+          <Button
+            as={NavLink}
+            w="100%"
+            to="/launch/assembly"
+            bg="#000"
+            color="#fff"
+          >
             Aggregate
           </Button>
         </GridItem>
-        <GridItem colSpan={{ base: 3, md: '1' }}>
-          <Heading size="md" textAlign="center">
-            Launch
-          </Heading>
-          <UnorderedList>
-            <ListItem>Send it.</ListItem>
-          </UnorderedList>
-          <Button as={Link} href="/launch/launchsub">
+        <GridItem
+          colSpan={{ base: 3, md: 1 }}
+          bg="#fff"
+          borderRadius="8px"
+          p={12}
+          textAlign="center"
+          display="flex"
+          flexDirection="column"
+        >
+          <Heading size="md">Launch</Heading>
+          <Box my={12}>
+            <Text my={9}>Send it.</Text>
+          </Box>
+          <Button
+            as={NavLink}
+            w="100%"
+            to="/launch/assembly"
+            bg="#000"
+            color="#fff"
+          >
             Send
           </Button>
         </GridItem>
-        <GridItem colSpan={{ base: 3, md: '1' }}>
-          <Heading size="md" textAlign="center">
-            Maintain
-          </Heading>
-          <UnorderedList>
-            <ListItem>Bugs</ListItem>
-            <ListItem>Customer service</ListItem>
-            <ListItem>Upgrade</ListItem>
-            <ListItem>Overhaul</ListItem>
-          </UnorderedList>
-          <Button as={Link} href="/launch/maintain">
+        <GridItem
+          colSpan={{ base: 3, md: 1 }}
+          bg="#fff"
+          borderRadius="8px"
+          p={12}
+          textAlign="center"
+          display="flex"
+          flexDirection="column"
+        >
+          <Heading size="md">Maintain</Heading>
+          <Box my={12}>
+            <Text>Bugs</Text>
+            <Text>Customer service</Text>
+            <Text>Upgrade</Text>
+            <Text>Overhaul</Text>
+          </Box>
+          <Button
+            as={NavLink}
+            w="100%"
+            to="/launch/assembly"
+            bg="#000"
+            color="#fff"
+          >
             Edit
           </Button>
         </GridItem>
       </Grid>
-      <Box py={28}>
-        <Heading textAlign="center" size="xl">
-          Send it.
-        </Heading>
-        <Heading textAlign="center" fontSize="24px" my={8}>
+      <Box pb={28} textAlign="center">
+        <Heading size="xl">Send it.</Heading>
+        <Heading fontSize="24px" my={8}>
           That's it. you did the work.
         </Heading>
-        <Text textAlign="center" textColor="#E6E6E6" px={24} fontSize="20px">
-          Line 'em up, and head em' out.
-          <br />
-          Time to see what you've built through the eyes of your comunity.
-          <br />
-          If you need to some back to apply some tweaks, the control panel is
-          here.
-          <br />
-          If you need to come back and burn it all down so you can rebuild, you
-          know where it is.
+        <Text textColor="#E6E6E6" px={24} fontSize="20px">
+          Line 'em up, and head em' out. Time to see what you've built through
+          the eyes of your comunity. If you need to some back to apply some
+          tweaks, the control panel is here. If you need to come back and burn
+          it all down so you can rebuild, you know where it is.
         </Text>
       </Box>
     </Box>

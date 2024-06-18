@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import { ChakraProvider, Box, theme } from '@chakra-ui/react';
+import { ChakraProvider, Box } from '@chakra-ui/react';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -41,7 +41,7 @@ const App = () => {
   return (
     <ChakraProvider theme={customTheme}>
       <Box bg="#fff">
-        <Box maxWidth="1440px" mr="auto" ml="auto" overflowX="hidden">
+        <Box maxWidth="1440px" mx="auto" overflowX="hidden">
           <Router>
             <Header />
             <Routes>
