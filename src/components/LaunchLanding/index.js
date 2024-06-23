@@ -21,13 +21,7 @@ const LaunchLanding = () => {
   };
 
   return (
-    <Box
-      mt="5rem"
-      px={8}
-      py={32}
-      bgGradient="linear(to-l, #000, #999)"
-      alignItems="center"
-    >
+    <Box w="100%" px={16} pt={48} pb={24} bgGradient="linear(to-l, #000, #999)">
       <Box textAlign="center">
         <Heading lineHeight="tall" color="#000">
           <Highlight

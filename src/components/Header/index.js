@@ -43,8 +43,12 @@ const Header = () => {
     '/presence',
     '/launch',
   ].includes(location.pathname)
-    ? '#454545'
-    : '#fff';
+    ? isScrolled
+      ? 'rgba(69, 69, 69, 0.5)'
+      : 'rgb(69, 69, 69)'
+    : isScrolled
+    ? 'rgba(255, 255, 255, 0.5)'
+    : 'rgb(255, 255, 255)';
   const menuIconColor = [
     '/launchlanding',
     '/structure',
@@ -64,6 +68,7 @@ const Header = () => {
       as="header"
       display={hiddenheader}
       bg={headerBgColor}
+      backdropFilter="blur(10px)"
       color="white"
       w="100%"
       maxW="1440px"

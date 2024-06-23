@@ -4,13 +4,7 @@ import { Box, Grid, GridItem, Button, Text, Heading } from '@chakra-ui/react';
 
 const Launch = () => {
   return (
-    <Box
-      mt="5rem"
-      w="100%"
-      px={16}
-      py={24}
-      bgGradient="linear(to-l, #000, #999)"
-    >
+    <Box w="100%" px={16} pt={48} pb={24} bgGradient="linear(to-l, #000, #999)">
       <Heading size="2xl" lineHeight="tall" color="#000" textAlign="center">
         Launch.
       </Heading>
@@ -105,7 +99,7 @@ const Launch = () => {
         <Heading fontSize="24px" my={8}>
           That's it. you did the work.
         </Heading>
-        <Text textColor="#E6E6E6" px={24} fontSize="20px">
+        <Text textColor="#E6E6E6" mx="auto" maxW="1010px" fontSize="20px">
           Line 'em up, and head em' out. Time to see what you've built through
           the eyes of your comunity. If you need to some back to apply some
           tweaks, the control panel is here. If you need to come back and burn

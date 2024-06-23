@@ -37,11 +37,18 @@ import Maintain from './components/Launch/Maintain';
 import NotFound from './components/NotFound';
 
 import customTheme from './theme';
+import ScrollToTopButton from './components/ScrollToTopButton';
 const App = () => {
   return (
     <ChakraProvider theme={customTheme}>
       <Box bg="#fff">
-        <Box maxWidth="1440px" mx="auto" overflowX="hidden">
+        <Box
+          maxWidth="1440px"
+          mx="auto"
+          overflowX="hidden"
+          width="100%"
+          pos="relative"
+        >
           <Router>
             <Header />
             <Routes>
@@ -88,6 +95,7 @@ const App = () => {
             </Routes>
             <Footer />
           </Router>
+          <ScrollToTopButton />
         </Box>
       </Box>
     </ChakraProvider>

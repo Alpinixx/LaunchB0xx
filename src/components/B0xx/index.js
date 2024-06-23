@@ -32,12 +32,20 @@ const B0xx = () => {
         borderRadius="8px"
         bgImg={ImageShopTitle}
         bgRepeat="no-repeat"
-        bgSize="100% 100%"
+        bgSize="1366px 100%"
+        bgPos="center"
       >
         <Heading size={{ base: '3xl', lg: '4xl' }} color="#fff">
           Shop title
         </Heading>
-        <Text maxWidth={800} color="#fff" mx="auto" my={8} fontSize="24px">
+        <Text
+          maxWidth={800}
+          color="#fff"
+          mx="auto"
+          my={8}
+          fontSize="24px"
+          px={4}
+        >
           Subheading with description of your shopping site
         </Text>
         <Button bg="#000" color="#fff">

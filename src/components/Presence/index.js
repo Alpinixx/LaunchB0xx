@@ -4,13 +4,7 @@ import { Box, Grid, GridItem, Button, Text, Heading } from '@chakra-ui/react';
 
 const Presence = () => {
   return (
-    <Box
-      mt="5rem"
-      w="100%"
-      px={16}
-      py={24}
-      bgGradient="linear(to-l, #000, #999)"
-    >
+    <Box w="100%" px={16} pt={48} pb={24} bgGradient="linear(to-l, #000, #999)">
       <Heading size="2xl" lineHeight="tall" color="#000" textAlign="center">
         Presence.
       </Heading>
@@ -108,7 +102,7 @@ const Presence = () => {
         <Heading fontSize="24px" my={8}>
           Dev work was the engine, but presence is the paint.
         </Heading>
-        <Text textColor="#E6E6E6" px={24} fontSize="20px">
+        <Text textColor="#E6E6E6" mx="auto" maxW="1010px" fontSize="20px">
           When sending your project, do it the right way. Make a name for
           yourself. Get yourself out there. Let people know who you are, and
           what you intend to accomplish with this project. If you give the

@@ -4,13 +4,7 @@ import { Box, Grid, GridItem, Button, Text, Heading } from '@chakra-ui/react';
 
 const Development = () => {
   return (
-    <Box
-      mt="5rem"
-      w="100%"
-      px={16}
-      py={24}
-      bgGradient="linear(to-l, #000, #999)"
-    >
+    <Box w="100%" px={16} pt={48} pb={24} bgGradient="linear(to-l, #000, #999)">
       <Heading size="2xl" lineHeight="tall" color="#000" textAlign="center">
         Development.
       </Heading>
@@ -161,7 +155,7 @@ const Development = () => {
         <Heading fontSize="24px" my={8}>
           Here’s where the magic begins.
         </Heading>
-        <Text textColor="#E6E6E6" px={24} fontSize="20px">
+        <Text textColor="#E6E6E6" mx="auto" maxW="1010px" fontSize="20px">
           We have made some valuable partnerships for your benefit. If you are
           already a blockchain guru, you know what to do. if you are just
           starting out, or have a few clues, no worries, we got you. We have

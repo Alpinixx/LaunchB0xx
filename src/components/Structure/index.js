@@ -4,13 +4,7 @@ import { Box, Grid, GridItem, Button, Text, Heading } from '@chakra-ui/react';
 
 const Structure = () => {
   return (
-    <Box
-      mt="5rem"
-      w="100%"
-      px={16}
-      py={24}
-      bgGradient="linear(to-l, #000, #999)"
-    >
+    <Box w="100%" px={16} pt={48} pb={24} bgGradient="linear(to-l, #000, #999)">
       <Heading size="2xl" lineHeight="tall" color="#000" textAlign="center">
         Structure.
       </Heading>
@@ -108,7 +102,7 @@ const Structure = () => {
         <Heading fontSize="24px" my={8}>
           Why ‘Structure first’?
         </Heading>
-        <Text textColor="#E6E6E6" px={24} fontSize="20px">
+        <Text textColor="#E6E6E6" mx="auto" maxW="1010px" fontSize="20px">
           Why lay a foundation before constructing a skyscraper? Because of very
           good reasons. Set your foundation first; and you will go far. We have
           added tools here for your ease of framework. Go on in. check them out

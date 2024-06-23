@@ -5,6 +5,13 @@ const customTheme = extendTheme({
     heading: "'JetBrains Mono', monospace !important",
     body: "'JetBrains Mono', monospace !important",
   },
+  styles: {
+    global: {
+      'html, body': {
+        hyphens: 'auto',
+      },
+    },
+  },
   customStyles: {},
 });
 
