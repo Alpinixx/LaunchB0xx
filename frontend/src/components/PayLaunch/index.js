@@ -1,5 +1,7 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { login } from '../../api';
+import { useAuth } from '../../AuthContext';
 import {
   Box,
   Grid,
@@ -13,6 +15,26 @@ import {
 } from '@chakra-ui/react';
 
 const PayLaunch = () => {
+  const [username, setUsername] = useState('');
+  const [error, setError] = useState('');
+  const { setIsAuthenticated } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    if (username === 'launchboxxonaptos') {
+      setIsAuthenticated(true);
+      navigate('/launchlanding');
+    } else {
+      setError('Invalid username or password');
+    }
+  };
+
+  const handleKeyDown = e => {
+    if (e.key === 'Enter') {
+      handleLogin();
+    }
+  };
+
   return (
     <Box
       w="100%"
@@ -56,17 +78,24 @@ const PayLaunch = () => {
             variant="filled"
             textAlign="center"
             placeholder="Somebody.Launch"
+            value={username}
+            onChange={e => setUsername(e.target.value)}
+            onKeyDown={handleKeyDown}
           />
+          {error && (
+            <Text color="#a00" textAlign="center">
+              {error}
+            </Text>
+          )}
 
           <Text textAlign="center">Connect your seed wallet to join.</Text>
           <Button
-            as={NavLink}
             bg="#000"
             color="#fff"
             _hover={{ bg: '#828282' }}
             _active={{ bg: '#aaa', color: '#000' }}
             my={6}
-            to="/launchlanding"
+            onClick={handleLogin}
           >
             Connect Wallet
           </Button>
